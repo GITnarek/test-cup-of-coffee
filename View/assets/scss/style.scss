@@ -1,0 +1,826 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('View/assets/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url('View/assets/fonts/montserrat/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100; /* Thin weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('View/assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('View/assets/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('View/assets/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+}
+
+$buttonText: #FFF;
+$priceText: #1B002F;
+$red: #E10000;
+$green: #43bb79;
+$blue: #3498db;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.header-banner {
+  width: 100%;
+  height: 100%;
+  background-image: url("/view/assets/images/header-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 790px;
+  padding: 25px 10px 140px 10px;
+}
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header-left-section {
+  max-width: 60%;
+  margin-top: 20px;
+}
+.long-description {
+  color: #232323;
+  font-family: sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.76px;
+}
+.short-description {
+  color: #232323;
+  font-family: sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.4px;
+  margin-top: 25px;
+}
+.button-item {
+  border-radius: 10px;
+  background: rgba(66, 66, 66, 0.80);
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer
+}
+
+.header-buttons {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.button-item:last-child {
+  margin-left: 22px;
+}
+.button-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+}
+.day {
+  color: $buttonText;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.6px;
+}
+.top-text {
+  color: $buttonText;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+}
+.bottom-text {
+  color: #D2E400;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+.header-bottom-buttons {
+  margin-top: 53px;
+  display: flex;
+  align-items: center;
+}
+.learn-more {
+  border-radius: 5px;
+  background: $red;
+}
+.learn-more a {
+  color: $buttonText;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 23px 65px;
+  display: block;
+}
+.free-consultation {
+  border: 1px solid #171717;
+  padding: 23px 29px;
+  margin-left: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.free-consultation span {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+.price-list {
+  padding: 90px 10px;
+}
+.title-section h2 {
+  color: #181818;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.prices {
+  margin-top: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.price-item {
+  width: 24.5%;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(72, 72, 72, 0.40);
+}
+.price-title {
+  color: $priceText;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 108%;
+  text-align: center;
+}
+.price-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.price {
+  color: $priceText;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 108%;
+}
+.old-price {
+  color: #A7ACBF;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 108%;
+  text-decoration: line-through;
+  text-decoration-color: #FF2222;
+  padding: 0 5px;
+}
+.percent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 36px;
+  border-radius: 4.685px;
+  background: $red;
+  color: $buttonText;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+}
+.price-description {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+}
+.price-description b {
+  color: $priceText;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.price-description * {
+  padding: 5px 0;
+}
+.price-description span {
+  color: #2A2A2A;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.prepayment {
+  margin-top: 25px;
+}
+.prepayment-title {
+  color: #A7ACBF;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 108%;
+}
+.prepayment-price {
+  color: $priceText;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 108%;
+}
+.price-buttons {
+  margin-top: 20px;
+}
+.price-buttons button {
+  border-radius: 10px;
+  background: $red;
+  padding: 12px 24px;
+  width: 100%;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.button-abroad {
+  margin-top: 12px;
+}
+.gift-img {
+  width: 100%;
+}
+.gift {
+  padding-bottom: 100px;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.course-item {
+  width: 21%;
+  position: relative;
+  margin-bottom: 48px;
+}
+.course-item:nth-child(4) ~ * {
+  display: none;
+}
+.course-item.active:nth-child(4) ~ * {
+  display: block;
+}
+.course-label {
+  display: inline-block;
+  padding: 2px 11px;
+  border-radius: 40px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.title-section h3 {
+  color: #181818;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 65px;
+}
+
+.special-courses {
+  padding: 65px 10px 75px;
+}
+
+.course-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-popup {
+  transform: rotateY(90deg);
+  position: absolute;
+  background-color: #fff;
+  margin-top: 35px;
+  width: 100%;
+  height: calc(100% - 88px);
+  transition: 1s;
+  z-index: 9;
+}
+.course-popup.active {
+  transform: rotateY(0);
+  filter: drop-shadow(8px 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.more {
+  color: #1B002F;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 0.14px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.course-item-image img {
+  width: 100%;
+  filter: drop-shadow(8px 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.course-price span {
+  color: #949494;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 0.26px;
+  text-decoration: line-through;
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.popup-body {
+  padding: 15px;
+}
+
+.course-title {
+  font-size: 24px;
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+.course-description {
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 24px;
+}
+
+.course-item-image {
+  margin-top: 17px;
+}
+
+.more-courses {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.more-courses button {
+  border-radius: 10px;
+  background: #E10000;
+  padding: 20px 60px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+}
+.course-top {
+  display: flex;
+  justify-content: space-between;
+}
+.more {
+  color: $priceText;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 0.14px;
+  text-decoration-line: underline;
+}
+.course-item-image img {
+  width: 100%;
+}
+footer {
+  background-color: #2A2A2A;
+  height: 474px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+
+  .footer-content {
+    max-width: 1100px;
+  }
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+  .footer-description {
+    margin-bottom: 45px;
+  }
+  .footer-descriptionTop {
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: $buttonText;
+    margin-bottom: 30px;
+  }
+  .footer-descriptionBottom {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: $buttonText;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.form {
+  background-color: #F5C618;
+  text-align: center;
+  padding-bottom: 60px;
+
+  .form-heading {
+    margin-bottom: 35px;
+    padding-top: 50px;
+
+    h2 {
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: 0;
+      padding-bottom: 23px;
+    }
+    p {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0;
+    }
+  }
+  .form-layout {
+    padding-bottom: 15px;
+
+    #dataForm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+    input {
+      width: 100%;
+      max-width: 550px;
+      height: 80px;
+      background-color: $buttonText;
+      border-radius: 10px;
+      border: 0;
+      font-family: "Montserrat-Regular", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #686868;
+    }
+    .form-submit     {
+      width: 100%;
+      max-width: 550px;
+      height: 80px;
+      background-color: $red;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .form-submit span {
+      font-family: "Montserrat-Bold", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $buttonText;
+    }
+    input::placeholder {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      color: #686868;
+    }
+  }
+  .form-info {
+    .form-infoText {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      color: #151515;
+    }
+  }
+  .form-submit:hover {
+    background-color: #2980b9 !important;
+  }
+  .loader,
+  .success-message,
+  .error-message {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0;
+  }
+  .loader {
+    color: $blue;
+  }
+  .success-message {
+    color: $green
+  }
+  .error-message {
+    text-transform: uppercase;
+    color: $red;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .loader::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-bottom-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 1024px){
+  .header-banner {
+    background-position: 70% 50%;
+  }
+}
+@media (min-width: 910px) and (max-width: 1024px){
+  .price-buttons button {
+    font-size: 10px;
+  }
+}
+@media (max-width: 910px) {
+  .price-item {
+    width: 49.5%;
+    margin-bottom: 20px;
+  }
+  .course-item {
+    width: 49%;
+  }
+  .logo img {
+    width: 150px;
+  }
+  .long-description {
+    font-size: 35px;
+  }
+  .short-description {
+    font-size: 28px;
+  }
+  .learn-more a {
+    font-size: 13px;
+    padding: 23px;
+  }
+  .free-consultation span {
+    font-size: 13px;
+  }
+  .free-consultation {
+    padding: 18px;
+  }
+}
+@media(max-width: 741px) {
+  .header-buttons {
+    flex-direction: column;
+  }
+  .button-item:last-child {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+@media(max-width: 650px) {
+  .header-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/View/assets/images/bg-yellow.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin-top: 300px;
+  }
+  .main-container * {
+    z-index: 2;
+  }
+  .long-description {
+    font-size: 24px;
+  }
+  .short-description {
+    font-size: 14px;
+    margin-top: 17px;
+  }
+  .header-bottom-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 45px;
+  }
+  .free-consultation {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+    padding: 16px;
+  }
+  .free-consultation span {
+    font-size: 18px;
+  }
+  .learn-more a {
+    font-size: 18px;
+    padding: 18px;
+  }
+  .header-left-section {
+    max-width: unset;
+  }
+  .description {
+    max-width: 60%;
+  }
+  .header-banner {
+    padding: 15px 10px 40px;
+    position: relative;
+  }
+  .gift {
+    padding: 0 25px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .price-item {
+    width: 100%;
+  }
+  .course-label {
+    font-size: 10px;
+  }
+  .more {
+    font-size: 10px;
+  }
+  .more-courses button {
+    font-size: 19px;
+  }
+  footer .footer-descriptionTop {
+    font-size: 18px;
+  }
+  footer .footer-descriptionBottom {
+    font-size: 14px;
+  }
+  .price-list {
+    padding: 24px 25px;
+  }
+  .title-section h2 {
+    font-size: 16px;
+  }
+  .prices {
+    margin-top: 24px;
+  }
+  .special-courses {
+    padding: 30px 25px 50px;
+  }
+  .title-section h3 {
+    font-size: 16px;
+    margin-bottom: 34px;
+  }
+  .form .form-heading h2 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  .form .form-heading p {
+    font-size: 12px;
+  }
+  .form .form-layout input {
+    font-size: 12px;
+    height: 36px;
+  }
+  .form .form-layout input::placeholder {
+    font-size: 12px;
+  }
+  .form {
+    padding: 0 10px 25px;
+  }
+  .form .form-heading {
+    padding-top: 35px;
+    margin-bottom: 17px;
+  }
+  .form .form-layout .form-submit span {
+    font-size: 16px;
+  }
+  .form .form-layout .form-submit {
+    height: 50px;
+  }
+  .form .form-info .form-infoText {
+    font-size: 8px;
+    line-height: 8px;
+  }
+  .form .form-info .form-infoText br {
+    display: none;
+  }
+  footer {
+    padding: 35px;
+    height: unset;
+  }
+  footer .footer-logo svg {
+    width: 70px;
+  }
+}
